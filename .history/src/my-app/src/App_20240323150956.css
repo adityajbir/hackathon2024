@@ -21,7 +21,7 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
-    height: auto;
+    height: 300px;
   }
 
   .currHeight {
@@ -81,7 +81,7 @@
   }
   
   a:link, a:visited {
-      color: #ffffffcc;
+      color: #567b9b;
       text-decoration: none;
   }
   
