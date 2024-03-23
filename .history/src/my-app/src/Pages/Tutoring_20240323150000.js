@@ -25,39 +25,35 @@ function Tutoring() {
               />
             </div>
             <div style={{ flex: '1', width: '100%' }}>
-              <h2>Ipsum Lorum Tutor</h2>
+              <h2>ECEN 214 Tutor</h2>
               <p>Ipsom Lorum</p>
+              <div style={{ textAlign: 'right' }}>
+                <button
+                  style={{
+                    backgroundColor: '#007bff',
+                    color: 'white',
+                    padding: '10px 20px',
+                    border: 'none',
+                    borderRadius: '5px',
+                    cursor: 'pointer',
+                  }}
+                >
+                  Make an appointment
+                </button>
+              </div>
             </div>
           </div>
-          
+          {/* Container for time availability */}
           <div style={{ 
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
             backgroundColor: 'rgba(255, 255, 255, 0.7)', 
             padding: '10px',
             borderRadius: '10px',
-            marginTop: '-10px' // Negative margin to remove gap between profile and available times
+            marginTop: '10px' // Space between profile section and time availability
           }}>
             <h3>Available Times</h3>
             <p>Monday: 9:00 AM - 5:00 PM</p>
             <p>Tuesday: 9:00 AM - 5:00 PM</p>
-            
-            <div style={{ marginLeft: 'auto' }}>
-              <button
-                style={{
-                  backgroundColor: '#007bff',
-                  color: 'white',
-                  padding: '10px 20px',
-                  border: 'none',
-                  borderRadius: '5px',
-                  cursor: 'pointer',
-                  marginTop: '10px' // Add some space between the times and button
-                }}
-              >
-                Make an appointment
-              </button>
-            </div>
+            {/* Add more days and times as needed */}
           </div>
         </div>
       ))}

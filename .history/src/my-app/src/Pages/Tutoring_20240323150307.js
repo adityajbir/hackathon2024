@@ -25,7 +25,7 @@ function Tutoring() {
               />
             </div>
             <div style={{ flex: '1', width: '100%' }}>
-              <h2>Ipsum Lorum Tutor</h2>
+              <h2>ECEN 214 Tutor</h2>
               <p>Ipsom Lorum</p>
             </div>
           </div>
