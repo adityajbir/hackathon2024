@@ -5,7 +5,7 @@ import { Outlet, Link } from "react-router-dom";
 const Layout = () =>{
     return(
         <>
-        <h1>Welcome to Home Page</h1>
+        <h1>Welcome to Home Page!</h1>
         <nav>
             <ul>
                 <li><Link to="/Home">Home</Link></li>
