@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom'; 
 const google = window.google;
-google.load("visualization", "1", {packages:["corechart"]});
+/*google.load("visualization", "1", {packages:["corechart"]});
 
 function initialize() {
         var opts = {sendMethod: 'auto'};
@@ -31,6 +31,7 @@ function handleQueryResponse(response) {
 }
       
       google.setOnLoadCallback(initialize);
+      */
 const Grades = () =>{
     return(
         <div> 
