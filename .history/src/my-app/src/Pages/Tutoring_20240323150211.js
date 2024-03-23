@@ -2,7 +2,7 @@ import React from 'react';
 
 function Tutoring() {
   return (
-    <div class="currHeight" style={{ 
+    <div style={{ 
       display: 'flex', 
       flexDirection: 'column',
       gap: '20px' // Space between each Tutoring component
@@ -25,11 +25,11 @@ function Tutoring() {
               />
             </div>
             <div style={{ flex: '1', width: '100%' }}>
-              <h2>Ipsum Lorum Tutor</h2>
+              <h2>ECEN 214 Tutor</h2>
               <p>Ipsom Lorum</p>
             </div>
           </div>
-          
+          {/* Container for time availability */}
           <div style={{ 
             display: 'flex',
             flexDirection: 'column',
@@ -42,22 +42,20 @@ function Tutoring() {
             <h3>Available Times</h3>
             <p>Monday: 9:00 AM - 5:00 PM</p>
             <p>Tuesday: 9:00 AM - 5:00 PM</p>
-            
-            <div style={{ marginLeft: 'auto' }}>
-              <button
-                style={{
-                  backgroundColor: '#007bff',
-                  color: 'white',
-                  padding: '10px 20px',
-                  border: 'none',
-                  borderRadius: '5px',
-                  cursor: 'pointer',
-                  marginTop: '10px' // Add some space between the times and button
-                }}
-              >
-                Make an appointment
-              </button>
-            </div>
+            {/* Add more days and times as needed */}
+            <button
+              style={{
+                backgroundColor: '#007bff',
+                color: 'white',
+                padding: '10px 20px',
+                border: 'none',
+                borderRadius: '5px',
+                cursor: 'pointer',
+                marginTop: '10px' // Add some space between the times and button
+              }}
+            >
+              Make an appointment
+            </button>
           </div>
         </div>
       ))}
