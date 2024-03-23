@@ -1,30 +1,31 @@
 import React, { Fragment, useState, useCallback, useMemo } from 'react'
 import ReactDOM from 'react-dom'; 
-import { Calendar, momentLocalizer  } from 'react-big-calendar';
+import { Calendar, dayjsLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import './Calendar.css';
-//import Calendar from 'react-calendar';
+import Calendar from 'react-calendar';
 
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 
+function Event(title, start, end) {
+    this.title = title;
+    this.start = start;
+    this.end = end;
+  } 
+
 const localizer = momentLocalizer(moment);
+
+var ValuePiece = Date | null;
+
+var Value = ValuePiece | [ValuePiece, ValuePiece];
 
 
 const CalendarPage = () => {
 
-    const [eventsList, setEvent] = useState([{}]);
+    const [value, onChange] = useState<Value>(new Date());
 
-    const selectSlot = 
-        useCallback(
-            ({ start, end }) => {
-                const eventTitle = window.prompt("Enter name of commitment:");
-                if (eventTitle){
-                    setEvent((prev) => [...prev, {title: eventTitle,start, end}])
-                }
-                
-            },
-            [setEvent])
-    
+
+    const [eventsList, setEvent] = useState([]);
 
     return (
         <Fragment>
@@ -32,10 +33,8 @@ const CalendarPage = () => {
                 <Calendar
           localizer={localizer}
           events={eventsList}
-          defaultView='week'
           selectable={true}
-          onSelectSlot={selectSlot}
-          titleAccessor={"title"}
+          onSelectSlot={handleSelect}
           startAccessor="start"
           endAccessor="end"
           style={{ height: 500 }}
@@ -43,6 +42,9 @@ const CalendarPage = () => {
           className="table-drop-shadow rounded-lg bg-[#F3FAFF] p-3"
         />
       </div>
+            <div>
+                <Calendar onChange={onChange} value={value} />
+             </div>
         </Fragment>
        
       );
