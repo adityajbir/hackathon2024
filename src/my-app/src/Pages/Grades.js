@@ -39,7 +39,32 @@ import { Chart } from "react-google-charts";
   
   export const options = {
     chart: {
-      title: "Grade Trends over time since Beginning of Semester",
+      title: "CSCE 483: Senior CAPSTONE DESIGN",
+      subtitle: "Categorized into multiple grade segments",
+      hAxis: { title: "Grade per category", minValue: 0, maxValue: 100 },
+      vAxis: { title: "Assignment Number", minValue: 0, maxValue: 100 },
+      legend: "none",
+    },
+  };
+
+  export const data_1 = [
+    [
+      "Grade Category",
+      "Recitation",
+      "Midterms",
+      "Homework",
+      "Papers"
+    ],
+    [1, 80, 76.8, 91, 85],
+    [2, 85, 79.5, 85, 86],
+    [3, 79, 88, 90, 88],
+    [4, 80, 83, 89, 87],
+    [5, 80, 87, 77, 89],
+  ];
+  
+  export const options_1 = {
+    chart: {
+      title: "CSCE 431: Software Engineering",
       subtitle: "Categorized into multiple grade segments",
       hAxis: { title: "Grade per category", minValue: 0, maxValue: 100 },
       vAxis: { title: "Assignment Number", minValue: 0, maxValue: 100 },
@@ -57,6 +82,21 @@ const Grades = () =>{
                 data={data}
                 options={options}
             />
+
+            <Chart 
+                chartType="Line"
+                width="100%"
+                height="400px"
+                data={data_1}
+                options={options_1}
+            />
+
+            <Chart 
+            />
+            
+            <Chart />
+
+            <Chart />            
         </div>
     )
 };
