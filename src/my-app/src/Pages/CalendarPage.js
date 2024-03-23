@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Fragment, useState, useCallback, useMemo } from 'react'
 import ReactDOM from 'react-dom'; 
 import { Calendar, dayjsLocalizer } from 'react-big-calendar';
 import dayjs from 'dayjs';
 
 const localizer = dayjsLocalizer(dayjs);
 
-const [eventsList, setEvent] = useState([]);
+//const [eventsList, setEvent] = useState([]);
 
 function Event(title, start, end) {
     this.title = title;
@@ -14,12 +14,13 @@ function Event(title, start, end) {
   }  
 
 const CalendarPage = () =>{
+    const [eventsList, setEvent] = useState([]);
     return(
         <div>
             <Calendar
                 localizer={localizer}
                 defaultView="week"
-                events={eventList}
+                events={eventsList}
                 startAccessor="start"
                 endAccessor="end"
                 style={{ height: 500 }}
