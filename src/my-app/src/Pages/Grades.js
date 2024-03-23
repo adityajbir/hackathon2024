@@ -24,11 +24,11 @@ import { Chart } from "react-google-charts";
   ];**/
   export const data = [
     [
-      "Grade Category",
-      "Recitation",
-      "Midterms",
-      "Homework",
-      "Papers"
+      "Assignment Number",
+      "Weekly Reports",
+      "Presentations",
+      "Peer Reviews",
+      "Project Reports"
     ],
     [1, 80, 76.8, 91, 85],
     [2, 85, 79.5, 85, 86],
@@ -49,22 +49,93 @@ import { Chart } from "react-google-charts";
 
   export const data_1 = [
     [
-      "Grade Category",
-      "Recitation",
-      "Midterms",
-      "Homework",
-      "Papers"
+      "Assignment Number",
+      "Quizzes",
+      "Homeworks",
+      "Exams",
     ],
-    [1, 80, 76.8, 91, 85],
-    [2, 85, 79.5, 85, 86],
-    [3, 79, 88, 90, 88],
-    [4, 80, 83, 89, 87],
-    [5, 80, 87, 77, 89],
+    [1, 80, 76.8, 91],
+    [2, 85, 79.5, 85],
+    [3, 79, 88, 90],
+    [4, 80, 83, 89],
+    [5, 80, 87, 77],
   ];
   
   export const options_1 = {
     chart: {
-      title: "CSCE 431: Software Engineering",
+      title: "CSCE 465: Network Security",
+      subtitle: "Categorized into multiple grade segments",
+      hAxis: { title: "Grade per category", minValue: 0, maxValue: 100 },
+      vAxis: { title: "Assignment Number", minValue: 0, maxValue: 100 },
+      legend: "none",
+    },
+  };
+
+  export const data_2 = [
+    [
+      "Assignment Number",
+      "Programming Assignments",
+      "Contest",
+      "Quizzes",
+      "Midterms"
+    ],
+    [1, 80, 76, 85, 79],
+    [2, 78, 79.5, 83, 89],
+    [3, 84, 78, 96, 92],
+    [4, 85, 84, 83, 83],
+    [5, 82, 88, 90, 89],
+  ];
+  
+  export const options_2 = {
+    chart: {
+      title: "CSCE 420: Artificial Intelligence",
+      subtitle: "Categorized into multiple grade segments",
+      hAxis: { title: "Grade per category", minValue: 0, maxValue: 100 },
+      vAxis: { title: "Assignment Number", minValue: 0, maxValue: 100 },
+      legend: "none",
+    },
+  };
+  export const data_3 = [
+    [
+      "Assignment Number",
+      "Weekly Assignments",
+      "Programming Assignments",
+      "Quizzes",
+      "Exams"
+    ],
+    [1, 70, 80, 90, 85],
+    [2, 85, 79.5, 85, 86],
+    [3, 92, 88, 87, 79],
+    [4, 84, 88, 89, 90],
+    [5, 90, 91, 87, 90],
+  ];
+  
+  export const options_3 = {
+    chart: {
+      title: "ECEN 424: Fundamentals of Networking",
+      subtitle: "Categorized into multiple grade segments",
+      hAxis: { title: "Grade per category", minValue: 0, maxValue: 100 },
+      vAxis: { title: "Assignment Number", minValue: 0, maxValue: 100 },
+      legend: "none",
+    },
+  };
+  export const data_4 = [
+    [
+      "Assignment Number",
+      "Papers", 
+      "Quizzes", 
+      "Exams"
+    ],
+    [1, 85, 86, 88],
+    [2, 87, 89, 87],
+    [3, 89, 76, 85],
+    [4, 81, 82, 84],
+    [5, 83, 77, 89],
+  ];
+  
+  export const options_4 = {
+    chart: {
+      title: "CSCE 402: Law and Policy in Cybersecurity",
       subtitle: "Categorized into multiple grade segments",
       hAxis: { title: "Grade per category", minValue: 0, maxValue: 100 },
       vAxis: { title: "Assignment Number", minValue: 0, maxValue: 100 },
@@ -82,7 +153,8 @@ const Grades = () =>{
                 data={data}
                 options={options}
             />
-
+            <br></br>
+            <br></br>
             <Chart 
                 chartType="Line"
                 width="100%"
@@ -90,13 +162,35 @@ const Grades = () =>{
                 data={data_1}
                 options={options_1}
             />
-
+            <br></br>
+            <br></br>
             <Chart 
+                chartType="Line"
+                width="100%"
+                height="400px"
+                data={data_2}
+                options={options_2}
             />
-            
-            <Chart />
-
-            <Chart />            
+            <br></br>
+            <br></br>
+            <Chart 
+                chartType="Line"
+                width="100%"
+                height="400px"
+                data={data_3}
+                options={options_3}
+            />
+            <br></br>
+            <br></br>
+            <Chart 
+                chartType="Line"
+                width="100%"
+                height="400px"
+                data={data_4}
+                options={options_4}
+            />     
+            <br></br>
+            <br></br>       
         </div>
     )
 };
