@@ -145,7 +145,7 @@ import { Chart } from "react-google-charts";
       
 const Grades = () =>{
     return(
-        <div> 
+        <div class="currHeight"> 
             <Chart
                 chartType="Line"
                 width="100%"

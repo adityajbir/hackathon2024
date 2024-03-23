@@ -2,7 +2,7 @@ import React from 'react';
 
 function Tutoring() {
   return (
-    <div style={{ 
+    <div class="currHeight" style={{ 
       display: 'flex', 
       flexDirection: 'column',
       gap: '20px' // Space between each Tutoring component
